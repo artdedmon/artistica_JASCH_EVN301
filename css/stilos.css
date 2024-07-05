@@ -1,0 +1,287 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-image: url('../media/fond.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden; 
+}
+
+body {
+    background: rgba(0, 0, 0, 0.8); 
+}
+
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px; 
+    position: relative;
+}
+
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); 
+    box-sizing: border-box; 
+}
+
+
+#menu_nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto; 
+    padding-left: 10px; 
+}
+
+#menu_nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+#menu_nav a:hover {
+    color: #ff0000;
+}
+
+.logo-nav {
+    height: 40px; 
+    margin-right: 20px; 
+}
+
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo-inicio {
+    margin-bottom: 20px;
+    max-width: 200px;
+    animation: fadeIn 2s ease-in-out; 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+h1, h2 {
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    margin-top: 0;
+    color: #ddd;
+}
+
+
+figure {
+    margin: 20px 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: 300px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.gif-container {
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    margin: 0 10px; 
+}
+
+.gif-battle .gif-container {
+    width: 48%; 
+}
+
+
+.gif-container.spiderman {
+    animation: slideRight 2s infinite; 
+}
+
+.gif-container.venom {
+    animation: rotateY 2s infinite; 
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.5);
+    }
+}
+
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes rotateY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+
+audio {
+    display: none; 
+}
+
+
+.parte3 {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.parte3 .gif-container {
+    width: 45%; 
+}
+
+.parte3 .gif-container.spiderman {
+    animation: slideInRight 2s infinite; 
+}
+
+.parte3 .gif-container.venom {
+    animation: rotateY 2s infinite; 
+}
+
+
+.parte5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100%; 
+    padding: 20px; 
+    position: relative;
+}
+
+.parte5 .gif-container {
+    width: 45%; 
+    overflow: hidden; 
+}
+
+
+.parte5 .gif-container img {
+    transition: transform 0.5s ease; 
+}
+
+.parte5 .gif-container:hover img {
+    animation: zoomExpand 3s ease-in-out; 
+}
+
+
+@keyframes zoomExpand {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(3); 
+    }
+    100% {
+        transform: scale(1); 
+    }
+}

@@ -1,0 +1,136 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc;
+    padding: 10px 20px;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.section {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los contenidos */
+    gap: 20px; /* Espacio entre la imagen y el contenido de texto */
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    position: relative;
+    color: white;
+}
+
+.content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+.flex-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los contenidos */
+}
+
+.text-content {
+    flex: 1; /* Ocupa todo el espacio disponible del contenedor */
+    max-width: 60%; /* Limita el ancho máximo del texto */
+}
+
+.text-content h1 {
+    font-size: 2rem; /* Tamaño del título */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.text-content p {
+    font-size: 1rem; /* Tamaño del párrafo */
+    line-height: 1.6; /* Interlineado */
+}
+
+.image-placeholder {
+    width: 150px; /* Tamaño deseado para la imagen */
+    height: 150px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.zoom-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.image-placeholder:hover .zoom-image {
+    transform: scale(0.8);
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #ccc;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .logo img {
+    height: 40px;
+}
+
+footer .social-icons a {
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
